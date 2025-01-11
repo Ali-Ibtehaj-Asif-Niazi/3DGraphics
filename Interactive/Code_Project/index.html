@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and Title -->
+    <meta charset="UTF-8">
+    <title>WebGPU Model Viewer</title>
+
+    <!-- Include dat.GUI library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <!-- Canvas for rendering the WebGPU content -->
+    <canvas id="gpuCanvas"></canvas>
+
+    <!-- Navigation Buttons -->
+    <!-- Previous Model Button -->
+    <button id="prevButton">&#10094;</button>
+    <!-- Next Model Button -->
+    <button id="nextButton">&#10095;</button>
+
+    <!-- Rotation Status Display -->
+    <div id="rotationStatus">Rotation (Press R): Off</div>
+
+    <!-- Post-Processing Effect Buttons -->
+    <button id="grayscaleButton" class="effect-button" style="top: 50px;">Grayscale</button>
+    <button id="invertButton" class="effect-button" style="top: 90px;">Invert Colors</button>
+    <button id="noEffectButton" class="effect-button" style="top: 130px;">No Effect</button>
+
+    <!-- Material Selector Dropdown -->
+    <select id="materialSelector" class="material-selector">
+        <option>Material Changer (Only works with Laptop)</option>
+        <option value="laptop.mtl">Material 1</option>
+        <option value="laptop2.mtl">Material 2</option>
+        <option value="laptop3.mtl">Material 3</option>
+        <!-- Add more materials as needed -->
+    </select>
+
+    <!-- Include the main JavaScript file -->
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
